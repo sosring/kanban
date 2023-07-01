@@ -6,6 +6,16 @@
   const columns = useLocalStorage<Column[]>("trelloBoard", [
     {
       id: nanoid(),
+      title: 'Todo',
+      tasks: []
+    },
+    {
+      id: nanoid(),
+      title: 'In Progress',
+      tasks: []
+    },
+    {
+      id: nanoid(),
       title: 'Backlog',
       tasks: [
         {
@@ -22,14 +32,8 @@
     },
     {
       id: nanoid(),
-      title: 'In Progress',
-      tasks: [
-        {
-          id: nanoid(),
-          title: 'Create landing page',
-          createdAt: new Date()
-        }
-      ]
+      title: 'Complete',
+      tasks: []
     }
   ])
 
